@@ -21,6 +21,6 @@ class LoginController extends Controller
 
     }
     public function authenticated(Request $request, $user){
-        return redirect()->to('/home');
+        return redirect()->to('/dashU');
     }
 }

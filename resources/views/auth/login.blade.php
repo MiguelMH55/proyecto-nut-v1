@@ -64,7 +64,7 @@
             </div>
             <div class="text-center px-lg-5 pt-lg3 pb-lg-4 p-4 w-100 mt-auto">
               
-              <p class="text-dark d-inline-block mb-0">¿Todavia no tienes una cuenta?</p> <a href="/regU" class="text-dark fw-bold text-decoration-none">Registrate</a>
+              <p class="text-dark d-inline-block mb-0">¿Todavia no tienes una cuenta?</p> <a href="/register" class="text-dark fw-bold text-decoration-none">Registrate</a>
             </div>
         </div>
     </div>

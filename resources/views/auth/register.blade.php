@@ -138,7 +138,7 @@
             </div>
             <div class="text-center px-lg-5 pt-lg3 pb-lg-4 p-0 w-100 mt-auto">
               <p class="text-dark d-inline-block mb-0">Al registrate, aceptas nuestras condiciones de uso y</p> <a href="#" class="text-dark fw-bold text-decoration-none">politícas de privacidad.</a><br>
-              <p class="text-dark d-inline-block mb-0">¿Ya tienes una cuenta?</p> <a href="/iniS" class="text-dark fw-bold text-decoration-none">Iniciar sesión</a>
+              <p class="text-dark d-inline-block mb-0">¿Ya tienes una cuenta?</p> <a href="/login" class="text-dark fw-bold text-decoration-none">Iniciar sesión</a>
             </div>
           </div>
 

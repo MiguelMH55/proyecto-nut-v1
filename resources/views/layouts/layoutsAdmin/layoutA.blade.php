@@ -145,6 +145,10 @@
               <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                 <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
                 <strong>Emmanuel</strong>
+                {{-- @auth
+                <strong>{{auth()->User()->nombre}}</strong>
+                @endauth --}}
+               
               </a>
               <ul class="dropdown-menu dropdown-menu-dark text-small ">
                 <li><a class="dropdown-item" href="#">Perfil</a></li>
@@ -152,7 +156,7 @@
                
                 <li><hr class="dropdown-divider"></li>
 
-                <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                <li><a class="dropdown-item" href="/logout">Cerrar sesión</a></li>
               </ul>
             </div>
            
