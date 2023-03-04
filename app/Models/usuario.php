@@ -2,23 +2,23 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Spatie\Permission\Traits\HasRoles;
 
-class User extends Authenticatable
+class usuario extends Model
 {
-    use HasApiTokens, HasFactory, Notifiable;
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
-    protected $table ='users';
+    use HasFactory;
+    use SoftDeletes;
+    use HasRoles;
+    protected $table ='usuarios';
     protected $fillable = [
+    
         'usu_nombre',
         'usu_apellido',
         'usu_num_doc',
@@ -26,7 +26,7 @@ class User extends Authenticatable
         'usu_eps',
         'usu_genero',
         'usu_tipo_documento',
-        'email',
+        'email', 
         'password',
         'usu_telefono'
     ];
@@ -89,24 +89,4 @@ class User extends Authenticatable
     public function anamesis_aumentaria(){
         return $this->hasOne(anamesis_aumentaria::class);
     }
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
-
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array<string, string>
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
-
-   
 }

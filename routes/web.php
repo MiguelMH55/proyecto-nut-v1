@@ -12,7 +12,7 @@ Route::get('/', function () {
     return view('home.home');
 });
 
-// Rutas de login y registro de usuario e index
+// Rutas de login y registro de usuario e index 
 Route::get('/register', [RegisterController::class, 'show']);
 Route::post('/register', [RegisterController::class, 'register']);
 Route::get('/login', [LoginController::class, 'show']);

@@ -31,45 +31,66 @@
               <h1 class="text-dark fw-bold mb-4">Registrate</h1>
               <form action="/register" method="POST" class="row g-3 needs-validation">
                 @csrf
-                <div class="col-md-4">
+                <div class="col-md-6">
                   <label for="validationCustom01" class=" text-dark fw-bold">Nombre</label>
-                  <input type="text" class="form-control bg-dark-x border-0" name="nombre" id="nombre" required pattern="[a-zA-Z]+">
+                  <input type="text" class="form-control bg-dark-x border-0" name="usu_nombre" id="usu_nombre" required pattern="[a-zA-Z]+">
                   <div class="valid-feedback">
                     Looks good!
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-6">
                   <label for="validationCustom02" class=" text-dark fw-bold">Apellidos</label>
-                  <input type="text" class="form-control bg-dark-x border-0" name="apellido" id="apellido"  required pattern="[a-zA-Z]+">
+                  <input type="text" class="form-control bg-dark-x border-0" name="usu_apellido" id="usu_apellido"  required pattern="[a-zA-Z]+">
                   <div class="valid-feedback">
                     Looks good!
                   </div>
                 </div>
+
+                
+                <div class="col-md-4">
+                  <label for="validationCustom04" class=" text-dark fw-bold">EPS</label>
+                  <select class="form-select form-select-lg mb-4 border-0 bg-dark-x" aria-label="Default select example" name="usu_eps" id="eps">
+                    <option selected>Seleccione</option>
+                    <option value="Aliansalud"> Aliansalud</option>
+                    <option value="Cafam_eps">Cafam EPS</option>
+                    <option value="Nueva_eps">Nueva eps</option>
+                    <option value="Capital_salud_eps">Capital Salud EPS</option>
+                    <option value="Capresoca">Capresoca</option>
+                    <option value="Colsubsidio">Colsubsidio</option>
+                    <option value="Comfandi">Comfandi</option>
+                    <option value="Compensar">Compensar</option>
+                    <option value="Coomeva">Coomeva</option>
+                    <option value="Coosalud">Coosalud</option>
+                    <option value="Eps_sanitas">EPS Sanitas</option>
+                    <option value="Eps_sura">EPS Sura</option>
+                    <option value="Famisanar">Famisanar</option>
+                    <option value="Medimas">Medimás</option>
+                    <option value="Mutual_ser">Mutual SER</option>
+                    <option value="Nueva_eps">Nueva EPS</option>
+                    <option value="Salud_total">Salud Total</option>
+                    <option value="Savia_salud_eps">Savia Salud EPS</option>
+                    <option value="Sisben_iv">SISBEN IV</option>
+                    <option value="Otro">Otro</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please select a valid state.
+                  </div>
+                </div>
+
+
                 <div class="col-md-4">
                   <label for="validationCustom02" class=" text-dark fw-bold">Telefono</label>
-                  <input type="text" class="form-control bg-dark-x border-0" name="telefono" id="telefono"  required pattern="[0-9]+">
+                  <input type="text" class="form-control bg-dark-x border-0" name="usu_telefono" id="tel_valor"  required pattern="[0-9]+">
                   <div class="valid-feedback">
                     Looks good!
                   </div>
                 </div>
               
-                <div class="col-md-4">
-                  <label for="validationCustom02" class=" text-dark fw-bold">Dirección</label>
-                  <input type="text" class="form-control bg-dark-x border-0"  name="direccion" id="direccion" required>
-                  <div class="valid-feedback">
-                    Looks good!
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <label for="validationCustom02" class=" text-dark fw-bold">Fecha de nacimiento</label>
-                  <input type="date" class="form-control bg-dark-x border-0" name="fecha_nac" id="fecha_nac" required>
-                  <div class="valid-feedback">
-                    Looks good!
-                  </div>
-                </div>
+              
+               
                 <div class="col-md-4">
                   <label for="validationCustom02" class=" text-dark fw-bold">Numero documento</label>
-                  <input type="text" class="form-control bg-dark-x border-0" name="numdocumento" id="numdocumento" required pattern="[0-9]+">
+                  <input type="text" class="form-control bg-dark-x border-0" name="usu_num_doc" id="usu_num_doc" required pattern="[0-9]+">
                   <div class="valid-feedback">
                     Looks good!
                   </div>
@@ -77,7 +98,7 @@
 
                 <div class="col-md-4">
                   <label for="validationCustom04" class=" text-dark fw-bold">Tipo de documento</label>
-                  <select class="form-select form-select-lg mb-4 border-0 bg-dark-x" name="tpdocumento" id="tpdocumento">
+                  <select class="form-select form-select-lg mb-4 border-0 bg-dark-x" name="usu_tipo_documento" id="usu_tipo_documento">
                     <option selected>Seleccione</option>
                     <option value="CC">Cedula de ciudadania</option>
                     <option value="CE">Cedula de extranjeria</option>
@@ -92,7 +113,7 @@
 
                 <div class="col-md-4">
                   <label for="validationCustom04" class=" text-dark fw-bold">Genero</label>
-                  <select class="form-select form-select-lg mb-4 border-0 bg-dark-x" aria-label="Default select example" name="genero" id="genero">
+                  <select class="form-select form-select-lg mb-4 border-0 bg-dark-x" aria-label="Default select example" name="usu_genero" id="usu_genero">
                     <option selected>Seleccione</option>
                     <option value="M">Maculino</option>
                     <option value="F">Femenino</option>
@@ -103,17 +124,37 @@
                 </div>
 
                 <div class="col-md-4">
-                  <label for="validationCustom04" class=" text-dark fw-bold">EPS</label>
-                  <select class="form-select form-select-lg mb-4 border-0 bg-dark-x" aria-label="Default select example" name="eps" id="eps">
-                    <option selected>Seleccione</option>
-                    <option value="Coosalud">Coosalud</option>
-                    <option value="Cajacopi">Caja copi</option>
-                    <option value="Nueva_eps">Nueva eps</option>
-                  </select>
-                  <div class="invalid-feedback">
-                    Please select a valid state.
+                  <label for="validationCustom02" class=" text-dark fw-bold">Fecha de nacimiento</label>
+                  <input type="date" class="form-control bg-dark-x border-0" name="usu_fch_nac" id="usu_fch_nac" required>
+                  <div class="valid-feedback">
+                    Looks good!
                   </div>
                 </div>
+
+
+                {{-- <div class="col-md-4">
+                  <label for="validationCustom02" class=" text-dark fw-bold">Barrio</label>
+                  <input type="text" class="form-control bg-dark-x border-0"  name="dir_barrio" id="dir_barrio" required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <label for="validationCustom02" class=" text-dark fw-bold">Dirección</label>
+                  <input type="text" class="form-control bg-dark-x border-0"  name="dir_valor" id="dir_valor" required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <label for="validationCustom02" class=" text-dark fw-bold">Punto de referencia</label>
+                  <textarea type="text" class="form-control bg-dark-x border-0"  name="dir_punto_ref" id="dir_punto_ref" required></textarea>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div> --}}
 
                 <div class="col-md-6">
                   <label for="validationCustom03" class=" text-dark fw-bold">Correo</label>

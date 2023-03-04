@@ -24,17 +24,16 @@ class RegisterRequest extends FormRequest
     public function rules()
     {
         return [
-        'nombre' => 'required',
-        'email' => 'required|unique:users,email',
+        'usu_nombre' => 'required',
+        'email' => 'required|unique:usuarios,email',
         'password' => 'required',
-        'apellido' => 'required',
-        'numdocumento' => 'required|unique:users,numdocumento',
-        'tpdocumento' => 'required',
-        'genero' => 'required',
-        'direccion' => 'required',
-        'fecha_nac'=>'required',
-        'eps'=>'required',
-        'telefono' => 'required',
+        'usu_apellido' => 'required',
+        'usu_num_doc' => 'required|unique:usuarios,usu_num_doc',
+        'usu_tipo_documento' => 'required',
+        'usu_genero' => 'required',
+        'usu_fch_nac'=>'required',
+        'usu_eps'=> 'required',
+        'usu_telefono' => 'required'
         ];
     }
 }

@@ -8,9 +8,13 @@ use Illuminate\Support\Facades\Auth;
 class AdminController extends Controller
 {
     public function index(){
-        if(Auth()::check()){
+        if (Auth::check()) {
             return view('adminUsu');
+        } else {
+           redirect()->route('/login');
         }
-        return view('auth.login');
-    }
+        
+        
+        
+        }  
 }
